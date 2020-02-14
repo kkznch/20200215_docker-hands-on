@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  php-fpm:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./local-app:/app:cached
+    working_dir: /app
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+    depends_on:
+      - php-fpm
+    volumes:
+      - ./conf.d/nginx/default.conf:/etc/nginx/conf.d/default.conf
