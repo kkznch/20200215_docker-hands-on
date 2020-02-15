@@ -9,7 +9,7 @@
 
 - リポジトリを clone します
   ```shell
-  $ git clone git@github.com:kkznch/20200215_docker-hands-on_completed.git
+  $ git clone https://github.com/kkznch/20200215_docker-hands-on_completed.git
   $ cd 20200215_docker-hands-on_completed
   ```
 - docker-compose コマンドで Docker コンテナを起動します
